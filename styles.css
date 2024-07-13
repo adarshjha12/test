@@ -1,0 +1,58 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #87CEEB; /* Sky blue background */
+}
+
+.car {
+  position: relative;
+  width: 200px;
+  height: 100px;
+}
+
+.body {
+  width: 100%;
+  height: 60%;
+  background-color: red;
+  border-radius: 20px;
+  position: absolute;
+  top: 10px;
+}
+
+.wheel {
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 70px;
+}
+
+.front-wheel {
+  left: 20px;
+  animation: rotate 2s linear infinite;
+}
+
+.back-wheel {
+  right: 20px;
+  animation: rotate 2s linear infinite;
+  position: relative;
+
+  &::before{
+    content: 'mbasbjbaj';
+    position: absolute;
+    top: 0;
+  }
+}
+
+@keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
